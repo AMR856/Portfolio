@@ -67,7 +67,7 @@ export default function Navbar() {
             </button>
           ))} 
 <Button className="bg-primary/20 text-primary hover:bg-primary/30 transition-colors">
-  <Link href="./Amr_Muhammad_Mahdi_Alnus_CV.pdf">Resume</Link>
+  <Link href="./Amr Muhammad Mahdi Alnus Combined CV.pdf">Resume</Link>
 </Button>
         </nav>
 
@@ -102,7 +102,7 @@ export default function Navbar() {
                 </button>
               ))}
               <Button className="w-full bg-gradient-to-r from-primary to-destructive text-white hover:from-destructive hover:to-primary transition-all">
-                <Link href="/Ahmed_Fawzy_Software_Engineer.pdf">Resume</Link>
+                <Link href="./Amr Muhammad Mahdi Alnus Combined CV.pdf">Resume</Link>
               </Button>
             </div>
           </motion.div>

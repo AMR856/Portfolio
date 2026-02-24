@@ -8,8 +8,8 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ahmed Fawzy | Portfolio",
-  description: "Professional Software Developer",
+  title: "Amr Alnus | Portfolio",
+  description: "Backend & Flutter Developer",
 };
 
 export default function RootLayout({

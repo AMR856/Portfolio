@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "*",
     },
-    sitemap: ["https://fawzy0z.me/sitemap.xml"],
+    sitemap: ["https://my-portfolio-eta-ebon-op7uhkivzm.vercel.app/sitemap.xml"],
   };
 }

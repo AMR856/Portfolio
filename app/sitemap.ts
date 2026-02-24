@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = "https://fawzy0z.me";
+const SITE_URL = "https://my-portfolio-eta-ebon-op7uhkivzm.vercel.app/";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPaths = ["", "/Amr_Muhammad_Mahdi_Alnus_CV.pdf"];

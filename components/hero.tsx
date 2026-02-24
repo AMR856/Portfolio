@@ -7,8 +7,6 @@ import {
   Facebook,
   Github,
   Linkedin,
-  Twitter,
-  Youtube,
   Search,
 } from "lucide-react";
 import { motion } from "framer-motion";
@@ -16,7 +14,7 @@ import Image from "next/image";
 
 export default function Hero() {
   const [text, setText] = useState("");
-  const fullText = "Software Developer";
+  const fullText = "Backend & Flutter Developer";
 
   useEffect(() => {
     let i = 0;
@@ -56,7 +54,7 @@ export default function Hero() {
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
               Hi, I&apos;m{" "}
               <span className="text-primary">
-                Ahmed <span className="text-destructive">Fawzy</span>
+                Amr <span className="text-destructive">Alnus</span>
               </span>
             </h1>
             <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mb-6">
@@ -64,9 +62,7 @@ export default function Hero() {
               <span className="animate-blink">|</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-              I build exceptional digital experiences with clean code and modern
-              technologies. Turning complex problems into elegant solutions is
-              what I do best.
+I build scalable, high-performance systems with clean, maintainable code, turning complex challenges into elegant and practical solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -87,7 +83,7 @@ export default function Hero() {
               </Button>
               <Button size="lg" variant="secondary" className="group" asChild>
                 <a
-                  href="/Ahmed_Fawzy_Software_Engineer.pdf"
+                  href="./Amr_Muhammad_Mahdi_Alnus_CV.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -105,7 +101,7 @@ export default function Hero() {
                 asChild
               >
                 <a
-                  href="https://linkedin.com/in/fawzy0z"
+                  href="https://www.linkedin.com/in/amr-alnus-64a4ab244/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -119,13 +115,14 @@ export default function Hero() {
                 asChild
               >
                 <a
-                  href="https://github.com/fawzy0z"
+                  href="https://github.com/AMR856"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
+
               <Button
                 variant="outline"
                 size="icon"
@@ -133,64 +130,34 @@ export default function Hero() {
                 asChild
               >
                 <a
-                  href="https://tiktok.com/@fawzy0z"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
-                    />
-                  </svg>
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full"
-                asChild
-              >
-                <a
-                  href="https://youtube.com/@fawzy0z"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Youtube className="h-5 w-5" />
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full"
-                asChild
-              >
-                <a
-                  href="https://facebook.com/fawzy0z"
+                  href="https://www.facebook.com/amer.alnas.90/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Facebook className="h-5 w-5" />
                 </a>
               </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full"
-                asChild
-              >
-                <a
-                  href="https://x.com/fawzy0z"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Twitter className="h-5 w-5" />
-                </a>
-              </Button>
+
+<Button
+  variant="outline"
+  size="icon"
+  className="rounded-full"
+  asChild
+>
+  <a
+    href="https://khamsat.com/user/amr_alnas"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image
+      src="/khamsaticon.png"
+      alt="X"
+      color="white"
+      width={30}
+      height={30}
+    />
+  </a>
+</Button>
             </div>
           </motion.div>
 
@@ -203,8 +170,8 @@ export default function Hero() {
             <div className=" inset-0 bg-linear-to-br from-primary/20 to-primary/5 rounded-full"></div>
             <div className=" inset-4 bg-muted rounded-full overflow-hidden">
               <Image
-                src="/fawzy0z.jpg"
-                alt="fawzy0z"
+                src="/amr.jpg"
+                alt="Amr Alnus"
                 width={400}
                 height={400}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

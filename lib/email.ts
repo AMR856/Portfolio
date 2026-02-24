@@ -17,7 +17,7 @@ export async function sendContactEmail(formData: ContactFormData) {
   try {
     const { error } = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>", // You can customize this once you verify your domain
-      to: "ahmed.fawzy100150@gmail.com",
+      to: "amer.live477@gmail.com",
       subject: `New Contact Form Submission: ${subject}`,
       text: `
 Name: ${name}

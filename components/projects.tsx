@@ -19,11 +19,11 @@ interface Project {
   id: number;
   title: string;
   shortDescription: string;
-  description: string;
   image: string;
   tags: string[];
   features: string[];
   demoLink: string;
+  isActive: boolean;
   githubLink: string;
   fullDescription: string;
 }
@@ -40,320 +40,265 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Tourism Security Administration Platform",
+      title: "Workout Tracker",
       shortDescription:
-        "A full-stack system serving 35+ administrations and 5,000+ tourism companies.",
-      description:
-        "A full-stack platform for managing and securing tourist groups under the Ministry of Interior.",
-      image: "/Nodejs.svg",
-      tags: ["Node.js", "Next.js", "MongoDB", "Express.js"],
+        "Scalable backend system for managing workouts, exercises, scheduling, and user progress, with a focus on performance, reliability, and authentication.",
+      image: "/node.svg",
+      tags: [
+        "Node.js",
+        "Postgres",
+        "TypeScript",
+        "Express.js",
+        "Prisma",
+        "Garfana",
+        "Jest",
+        "Supertest",
+      ],
       features: [
-        "Centralized management for 35+ administrations",
-        "Support for 5,000+ tourism companies",
-        "Secure authentication and authorization",
-        "Role-based access control",
-        "Reporting and analytics dashboard",
+        "Scalable backend for managing workouts, exercises, and user progress",
+        "JWT-based authentication with secure, protected routes",
+        "Workout CRUD operations, scheduling, notes, and reporting",
+        "Built with Node.js, Express, TypeScript, Prisma, and PostgreSQL",
+        "Input validation using Zod with comprehensive testing (80%+ coverage)",
+        "Load tested with k6 for high concurrency and performance",
+        "Monitoring with Prometheus & Grafana, scaled using PM2 cluster mode",
       ],
       demoLink: "",
-      githubLink: "",
+      isActive: false,
+      githubLink: "https://github.com/AMR856/Workout-Tracker",
       fullDescription:
-        "Delivered a full-stack platform for the General Administration for Securing Tourist Groups at the Ministry of Interior, serving over 35 administrations and 5,000 tourism companies. Built with Next.js for the frontend and Node.js/Express for the backend. Features include secure authentication, role-based access, comprehensive reporting, and streamlined workflows.",
+        "Workout Tracker is a scalable backend system for tracking workouts, exercises, and user progress. It supports authentication, workout management, scheduling, and reporting, with a focus on performance, scalability, and reliability.",
     },
     {
       id: 2,
-      title: "High-Performance API System",
+      title: "Image Processing Service",
       shortDescription:
-        "An API capable of handling 15,000+ requests per second with 35% downtime reduction.",
-      description:
-        "A scalable API system designed for high concurrency and availability.",
-      image: "/Nodejs.svg",
-      tags: ["Node.js", "Redis", "PostgreSQL", "JWT"],
+        "A scalable Node.js and TypeScript backend for secure user authentication and image processing, featuring cloud uploads, transformations, pagination, and background job handling.",
+      image: "/node.svg",
+      tags: [
+        "Node.js",
+        "Express.js",
+        "Prisma",
+        "RabbitMQ",
+        "TypeScript",
+        "Jest",
+        "Cloudinary",
+      ],
       features: [
-        "Handles 15,000+ requests/second",
-        "Optimized caching with Redis",
-        "JWT-based secure authentication",
-        "Performance monitoring with K6",
-        "Reduced system downtime by 35%",
+        "Secure JWT-based authentication with user registration, login, and profile endpoints",
+        "Image upload system using Multer and Cloudinary with cloud storage integration",
+        "Dynamic image transformations (resize, crop, rotate, format, filters)",
+        "Paginated image retrieval with user-based filtering",
+        "Background job processing using RabbitMQ for scalable workloads",
+        "Built with Node.js, TypeScript, Express, Prisma, and SQLite",
+        "Centralized error handling with clean layered architecture (Controller / Service / Model)",
       ],
       demoLink: "",
-      githubLink: "",
+      isActive: false,
+
+      githubLink: "https://github.com/AMR856/Image-Processing-Service",
       fullDescription:
-        "Developed a high-performance API backend capable of sustaining over 15,000 requests per second, leveraging Redis caching, JWT authentication, and optimized query strategies. Achieved a 35% reduction in downtime through architectural improvements and monitoring.",
+        "A production-ready Node.js + TypeScript backend for user authentication and image processing. The project supports secure user accounts, image uploads via Cloudinary, image transformations, pagination, and background processing with a clean layered architecture.",
     },
     {
       id: 3,
-      title: "Meta Pages & Groups Manager",
+      title: "E-Commerce API",
       shortDescription:
-        "A backend system for managing 50+ Meta pages and groups with full automation.",
-      description:
-        "Automates Meta page and group operations including content posting, messaging, and comment interactions.",
-      image: "/Nodejs.svg",
-      tags: ["Node.js", "Express.js", "Meta API", "RabbitMQ"],
+        "A production-ready E-Commerce API built with Node.js, Express, and MongoDB, featuring secure authentication, product and order management, and Stripe payment integration.",
+      image: "/node.svg",
+      tags: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Stripe",
+        "JWT",
+        "REST API",
+      ],
       features: [
-        "Manage and schedule posts for 50+ pages and groups",
-        "Auto-commenting and replying based on comment content",
-        "Auto-deletion or posting on groups/pages",
-        "Automated messaging in response to comments",
-        "Webhook-based event handling and token management",
+        "Scalable E-Commerce REST API built with Node.js, Express, and MongoDB",
+        "JWT-based authentication with role-based access control (Admin / User)",
+        "Product management with CRUD, ratings, reviews, and image uploads (Multer)",
+        "Order management system with ownership rules, statistics, and total sales",
+        "Secure payment integration using Stripe for handling transactions",
+        "Request validation using Joi with structured error handling",
+        "Swagger API documentation with Bearer authentication support",
+        "Modular clean architecture for maintainability and scalability",
       ],
       demoLink: "",
-      githubLink: "",
+      isActive: false,
+
+      githubLink: "https://github.com/AMR856/E-Commerce-API",
       fullDescription:
-        "Built a complete backend system that integrates with the Meta Graph API to manage over 50 pages and groups. The system supports scheduled publishing, auto-posting or deletion, auto-comments and replies based on comment content, and automated message sending. Integrated with RabbitMQ for message queuing and processing, and uses webhooks to react to user interactions in real time.",
+        "A production-ready E-Commerce REST API built with Node.js, Express, and MongoDB. The project implements secure JWT-based authentication, role-based authorization, product and order management, and Stripe payment integration. Designed with a modular and scalable architecture, it includes validation, error handling, and comprehensive Swagger API documentation.",
     },
     {
       id: 4,
-      title: "WhatsApp Notification API",
+      title: "Discord Bot",
       shortDescription:
-        "Flexible API system for sending WhatsApp messages for OTPs, order updates, and more.",
+        "A feature-rich Discord bot built with Node.js, Discord.js, and MongoDB for server management, user interaction, and fun commands.",
       description:
-        "A modular backend service for sending WhatsApp messages from any system.",
-      image: "/Nodejs.svg",
-      tags: ["Node.js", "RabbitMQ", "Redis", "JWT"],
+        "Backend system for managing Discord servers, tracking user activity, and executing interactive commands.",
+      image: "/node.svg",
+      tags: ["Node.js", "Discord.js", "MongoDB", "Mongoose", "Bot Development"],
       features: [
-        "Send OTPs, order updates, and custom messages",
-        "RabbitMQ-based message queuing and retries",
-        "Dead-letter queue for failed deliveries",
-        "Secure JWT-authenticated API endpoints",
-        "Modular design for integration with various systems",
+        "User commands: getAvatar, youtube, balance, pay, ban, kick, timeout, random-joke, reactor, embed",
+        "Server status commands: dnd, listening, online, idle, ping",
+        "User registration and tracking within the server",
+        "MongoDB for persistent data storage",
+        "Modular design for easy feature expansion",
+        "Interactive and fun bot functionalities",
+        "Secure command execution with role and permission checks",
       ],
       demoLink: "",
-      githubLink: "",
+      isActive: false,
+
+      githubLink: "https://github.com/AMR856/Discord-Bot",
       fullDescription:
-        "Designed and implemented a backend API for sending WhatsApp messages, usable for OTP verification, order status updates, marketing notifications, or any custom purpose. The system is built on Node.js and uses RabbitMQ for message queuing, retry logic, and dead-letter management. Includes JWT-secured endpoints for safe integration with third-party systems.",
+        "Developed a Discord bot using Node.js, Discord.js, and MongoDB. The bot provides various functionalities including user commands (avatars, balance, payments, moderation), server status management, registration, and interactive features like jokes and reaction counting. Built with a modular architecture for easy expansion and persistent storage using MongoDB.",
     },
     {
       id: 5,
-      title: "Laravel SaaS Platforms",
+      title: "Online Code Compiler API",
       shortDescription:
-        "Multiple SaaS projects across eCommerce, Restaurants, Schools, POS, and Rentals.",
+        "Secure online code execution platform with Docker-based sandboxing and real-time output.",
       description:
-        "Contributed to several Laravel SaaS platforms for various business domains.",
-      image: "/laravel.svg",
-      tags: ["PHP", "Laravel", "MySQL", "Vue.js"],
+        "Built a backend service to compile and execute code safely in isolated environments.",
+      image: "/node.svg",
+      tags: ["Node.js", "TypeScript", "Docker", "Express", "RabbitMQ"],
       features: [
-        "Custom modules for different industries",
-        "Multi-tenant architecture",
-        "Role-based access control",
-        "Integrated payment gateways",
-        "Responsive UI with Vue.js",
+        "Secure code execution using Docker sandboxing",
+        "Support for multiple programming languages (extensible)",
+        "Real-time stdout and stderr output",
+        "Job queue processing with RabbitMQ",
+        "REST API for submitting and retrieving execution results",
+        "Timeout and resource limits for safe execution",
       ],
       demoLink: "",
-      githubLink: "",
+      isActive: false,
+
+      githubLink: "https://github.com/AMR856/Online-Code-Compiler",
       fullDescription:
-        "Worked as a PHP developer contributing to multiple Laravel SaaS projects covering eCommerce, restaurants, schools, advertising, POS, and rental systems. Delivered custom modules, multi-tenant features, secure payment integration, and responsive user interfaces.",
+        "Developed an online code compiler API that securely executes user-submitted code inside isolated Docker containers. Designed the system to support multiple languages, handle concurrent jobs using RabbitMQ, and provide real-time execution output. Implemented strict resource limits and timeouts to ensure safe and efficient code execution.",
     },
     {
       id: 6,
-      title: "elwaiter – Smart Ordering & Waiter Call System",
+      title: "URL Shortening Service",
       shortDescription:
-        "Built a real-time restaurant and café service system using QR codes for calling waiters and placing orders.",
+        "Scalable service to shorten URLs with analytics and high-performance redirection.",
       description:
-        "Developed a full-stack system for restaurants and cafés with real-time notifications, custom dashboards, and mobile/web integration.",
-      image: "/elwaiter.jpg", // replace with appropriate branding or project screenshot
-      tags: [
-        "Laravel",
-        "Socket.io",
-        "Cloud Firestore",
-        "MySQL",
-        "PWA",
-        "Real-time Systems",
-      ],
+        "Built a backend system to generate, resolve, and track shortened URLs efficiently.",
+      image: "/node.svg",
+      tags: ["NestJS", "TypeScript", "PostgreSQL", "Redis", "Prisma"],
       features: [
-        "QR-based waiter call and order system",
-        "Real-time communication using Socket.io",
-        "Custom admin dashboard for each restaurant/café",
-        "Live analytics and reporting for decision-making",
-        "Cloud Firestore integration for mobile sync",
-        "Support for high-frequency notifications",
-        "Web and mobile compatibility (PWA-ready)",
+        "Shorten URLs with unique hashes",
+        "Redis caching for fast redirection",
+        "Click tracking and analytics dashboard",
+        "RESTful API for creating and resolving links",
+        "Unit and integration tests with Jest",
       ],
-      demoLink: "https://elwaiter.com/",
-      githubLink: "", // optional
+      demoLink: "",
+      isActive: false,
+
+      githubLink: "https://github.com/AMR856/URL-Shortening-Service",
       fullDescription:
-        "Engineered a real-time ordering and waiter call platform used in restaurants and cafés, where customers scan a QR code to either call a waiter or place orders directly from their phones. The system pushes real-time updates to staff dashboards and mobile apps via Socket.io, ensuring fast response times. Admins can configure their layout, manage orders, and access detailed analytics per location. The project tackled high-concurrency challenges, built with Laravel on the backend, MySQL for structured data, and Firestore for real-time mobile sync.",
+        "Developed a NestJS-based URL shortening service with REST APIs, Redis caching, and analytics tracking. Designed efficient database models using Prisma and PostgreSQL. Implemented comprehensive tests with Jest to ensure reliability, and optimized redirection performance for high request volumes.",
     },
     {
       id: 7,
-      title: "All-in-One Currency Exchange Plugin | WordPress Plugin",
+      title: "Messaging Platform",
       shortDescription:
-        "Developed and published a full-featured WordPress currency exchange plugin with customizable UI and real-time rates.",
+        "Real-time messaging backend with encryption, online presence, and typing indicators.",
       description:
-        "Created a WordPress plugin for currency conversion using real-time exchange rates with multiple layout options and Gutenberg/Elementor support.",
-      image: "/All-In-OnePlugin.png",
-      tags: [
-        "PHP",
-        "WordPress",
-        "Gutenberg",
-        "WooCommerce",
-        "Currency API",
-        "Elementor",
-      ],
+        "Developing a scalable chat platform supporting secure messaging and real-time updates.",
+      image: "/node.svg",
+      tags: ["Node.js", "TypeScript", "Socket.IO", "WebSockets"],
       features: [
-        "Real-time currency exchange rates via API",
-        "Multiple widget layouts: horizontal, vertical, and inline",
-        "Shortcode and Gutenberg block support",
-        "Elementor widget integration",
-        "Admin panel for configuration and API key management",
-        "Responsive design for seamless mobile experience",
-        "Published on WordPress.org",
-      ],
-      demoLink: "https://wordpress.org/plugins/all-in-one-currency-exchange/",
-      githubLink: "", // optional if open source
-      fullDescription:
-        "Designed and published the All-in-One Currency Exchange plugin on WordPress.org. The plugin allows site owners to display live currency conversion widgets using real-time exchange rates from a configurable API. Built with modular PHP, it supports multiple display layouts (horizontal, vertical, inline), offers shortcodes, Gutenberg blocks, and Elementor widgets. Includes a customizable admin dashboard for API key configuration and styling. Fully responsive and easy to integrate into any WordPress site.",
-    },
-    {
-      id: 8,
-      title: "BookCloudMe – Digital Publishing Platform",
-      shortDescription:
-        "Backend development for a digital publishing platform enabling authors to publish and sell eBooks online.",
-      description:
-        "Engineered the backend for BookCloudMe, a platform for digital book publishing, sales, and reader access, using .NET and SQL Server.",
-      image: "/bookcloudme.png", // replace with BookCloudMe branding or screenshot
-      tags: [
-        ".NET",
-        "ASP.NET Core",
-        "SQL Server",
-        "REST API",
-        "JWT",
-        "Content Management",
-        "eCommerce",
-      ],
-      features: [
-        "eBook management system for authors and publishers",
-        "Online bookstore with secure purchasing and downloads",
-        "Role-based access control for readers, authors, and admins",
-        "Admin dashboard for managing content, sales, and analytics",
-        "Payment gateway integration for digital transactions",
-        "Support for uploading and managing PDF/eBook formats",
-        "Secure REST APIs for mobile and web frontend integration",
-      ],
-      demoLink: "https://www.bookcloudme.com/",
-      githubLink: "", // optional
-      fullDescription:
-        "BookCloudMe is a digital publishing platform that allows authors to publish and sell their books online. I developed the backend using ASP.NET Core and SQL Server, focusing on scalable architecture and secure APIs. The system supports user roles, book uploads, order processing, and real-time reporting. I also implemented JWT-based authentication, payment integration, and admin tools for content and sales management. The backend services were built to support both the web frontend and potential mobile clients.",
-    },
-    {
-      id: 9,
-      title: "Conquer Online Private Server – My Journey into Game Development",
-      shortDescription:
-        "MMORPG Architecture • Reverse Engineering • Multiplayer Systems.",
-      description:
-        "Built a game server emulator replicating Conquer Online gameplay mechanics.",
-      image: "/conqueronline.jpg",
-      tags: [
-        "C#",
-        ".NET",
-        "C++",
-        "MySQL",
-        "Entity Framework",
-        "Socket Programming",
-        "Multithreading",
-        "RPC",
-        "Google Protocol Buffers",
-        "Cryptography",
-        "Microservices",
-        "Reverse Engineering",
-        "IDA Pro",
-        "OllyDbg",
-        "x64dbg",
-      ],
-      features: [
-        "Packet-level protocol handling (custom binary protocols)",
-        "Player authentication and session management",
-        "Secure encrypted communication using Blowfish, RC5, CAST5, and custom algorithms",
-        "Thread pool management for maps, NPCs, and real-time combat systems",
-        "Scalable microservice architecture using RPC for inter-server communication",
-        "In-game item inventory and quest system with persistence",
-        "NPC logic, map parsing, and coordinate-based pathfinding",
-        "Real-time PvP and PvE combat engine",
-        "Deadlock-free concurrent systems (e.g., trade, movement, attack)",
-        "Client-side extensions via injected DLLs",
-        "Packet sniffing and emulation by reverse engineering original client",
-        "Assembly-level debugging using IDA Pro, OllyDbg, and x64dbg",
-        "Google Protocol Buffers for efficient structured messaging",
+        "End-to-end encrypted messaging",
+        "Real-time online presence and typing indicators",
+        "Broadcasting messages to all connected clients",
+        "Contact synchronization across devices",
+        "Scalable architecture for high concurrency",
       ],
       demoLink: "",
       githubLink: "",
-      fullDescription: `Before I ever wrote a line of code, I was a passionate Conquer Online player. I spent countless hours immersed in the game, fascinated not just by the gameplay, but by the systems behind it—how characters moved, how battles worked, how data flowed between client and server.
-
-That curiosity became the starting point of my journey into software development.
-
-As a self-initiated long-term project, I began modifying and extending a private server version of the game to understand how MMORPGs work under the hood. It was a challenging but rewarding process that taught me more than any tutorial ever could.
-
-What I Worked On:
-
-Built and extended server-side systems in C#, including world maps, combats, and much more.
-
-Designed threaded systems using thread pools to manage concurrent gameplay events like monsters, combat, and player interactions.
-
-Used Entity Framework for managing player data and game state in a structured, efficient way.
-
-Explored cryptographic systems such as Blowfish, RC5, CAST5, and custom protocols for secure client-server communication.
-
-Learned how to structure a microservice-oriented architecture with RPC communication to scale game components.
-
-Solved deadlock and race condition issues during real-time actions like combat.
-
-Created client-side extensions (like library.dll) in C++, injecting them into the game client to control behaviors externally.
-
-Used IDA Pro, OllyDbg, and x64dbg to reverse engineer the game client, analyze packet flow, and emulate its logic on the server side.
-
-Applied Google Protobuf.
-
-This project wasn’t just about building a server—it was about discovering how online games truly work. It sparked my love for development, shaped my technical foundation, and gave me hands-on experience with real-world problems in distributed systems, networking, and reverse engineering.
-
-It all started with a game I loved—and turned into the path that made me a developer.`,
+      fullDescription:
+        "Building a messaging backend using Node.js and Socket.IO, enabling real-time communication between clients. Implemented encryption for security, presence indicators, typing notifications, and designed the system to scale efficiently for multiple concurrent users.",
+      isActive: true,
     },
-    {
-      id: 10,
-      title: "EslamOffers — Offers & Deals Platform",
-      shortDescription:
-        "A modern offers/discounts platform with a Next.js frontend and .NET Core backend.",
-      description:
-        "Public-facing deals platform built with Next.js for the frontend, .NET Core for backend services, and MySQL as the primary datastore.",
-      image: "/eslamoffers.png",
-      tags: [
-        "Next.js",
-        ".NET Core",
-        "MySQL",
-        "REST API",
-        "Tailwind CSS",
-        "Docker",
-      ],
-      features: [
-        "Fast SSR/ISR frontend with Next.js",
-        "Scalable .NET Core API services",
-        "Relational data model in MySQL",
-        "Search and filtering for offers",
-        "User authentication and account management",
-        "Admin dashboard for creating and managing offers",
-        "Responsive UI and mobile-friendly layouts",
-        "Containerized deployment (Docker) and CI/CD-ready",
-      ],
-      demoLink: "https://eslamoffers.com",
-      githubLink: "",
-      fullDescription: `EslamOffers is a deals and offers platform with a fast, SEO-friendly Next.js frontend and robust .NET Core backend services backed by MySQL.
-      
-Frontend:
-- Next.js for server-side rendering and static rendering where appropriate.
-- Tailwind CSS for a responsive, utility-first UI.
-- Client-side interactions handled with React hooks and lightweight state.
-
-Backend:
-- .NET Core Web API for business logic and REST endpoints.
-- MySQL for relational data (offers, merchants, users).
-- Auth via JWT / cookie-based sessions and role-based admin access.
-- Admin dashboard for offer lifecycle: create, schedule, publish, archive.
-
-Operations:
-- Containerized with Docker for consistent deployments.
-- CI/CD pipeline for automated builds and releases.
-- Designed for horizontal scaling of stateless API services and optimized DB queries for high read throughput.
-
-Note: Update any details above after reviewing the live site to match actual features and architecture.`,
-    },
+{
+  id: 9,
+  title: "Movies App",
+  shortDescription: "Flutter mobile app for browsing and managing movie profiles.",
+  description: "Implemented movie search, profile screens, and user history using Clean Architecture and Cubit state management.",
+  image: "/flutter.svg",
+  tags: ["Flutter", "SQLite", "Clean Architecture", "Cubit"],
+  features: [
+    "Implemented search and profile screens",
+    "Managed user history with SQLite",
+    "Handled Git branching and merge conflicts collaboratively",
+    "Applied Clean Architecture and Cubit for state management",
+  ],
+  demoLink: "",
+  githubLink: "https://github.com/AMR856/Movies-App",
+  fullDescription: "Developed a Flutter app that allows users to search for movies, view detailed profiles, and track viewing history. Applied Clean Architecture and Cubit for scalable and maintainable state management while managing team collaboration with Git.",
+  isActive: false
+}
+,
+{
+  id: 10,
+  title: "Events App",
+  shortDescription: "Flutter app for event management with maps, authentication, and theming.",
+  description: "Enabled secure sign-in, location mapping, and dynamic theming using Firebase and Provider.",
+  image: "/flutter.svg",
+  tags: ["Flutter", "Firebase Authentication", "Provider", "Google Maps"],
+  features: [
+    "Firebase email/password and Google sign-in authentication",
+    "Provider state management for theming and localization",
+    "Google Maps integration to select and view event locations",
+    "Clean Architecture for scalable app structure",
+  ],
+  demoLink: "",
+  githubLink: "https://github.com/AMR856/Events-App",
+  fullDescription: "Developed a Flutter events app with Firebase Authentication for secure login, Provider for dynamic theming, and Google Maps for visualizing event locations. Applied Clean Architecture principles for maintainability.",
+  isActive: false
+}
+,
+{
+  id: 11,
+  title: "Contacts App",
+  shortDescription: "Flutter mobile app for managing contacts with images and email metadata.",
+  description: "Implemented contact management with local persistence and image handling.",
+  image: "/flutter.svg",
+  tags: ["Flutter"],
+  features: [
+    "Manage contacts with images and email metadata",
+    "Implemented local storage using Android internal APIs",
+    "Simple and intuitive UI for contact management",
+  ],
+  demoLink: "",
+  githubLink: "https://github.com/AMR856/Contacts-App",
+  fullDescription: "Built a Flutter contacts app that allows users to store, view, and manage contacts with associated images and metadata, leveraging local persistence for offline functionality.",
+  isActive: false
+}
+,
+{
+  id: 12,
+  title: "News App",
+  shortDescription: "Flutter app to display news from third-party APIs using clean UI components.",
+  description: "Fetched news from external APIs and managed state with Cubit while applying Clean Architecture.",
+  image: "/flutter.svg",
+  tags: ["Flutter", "Clean Architecture", "Cubit"],
+  features: [
+    "Integrated third-party news APIs",
+    "Mapped API responses to clean UI components",
+    "Applied Clean Architecture and Cubit for state management",
+  ],
+  demoLink: "",
+  githubLink: "https://github.com/AMR856/News-App",
+  fullDescription: "Developed a Flutter news app that fetches articles from external APIs, maps responses to well-designed UI components, and uses Cubit for predictable state management following Clean Architecture principles.",
+  isActive: false
+}
   ];
 
   return (
@@ -468,6 +413,17 @@ Note: Update any details above after reviewing the live site to match actual fea
                                 <ExternalLink className="h-4 w-4 mr-2" />
                                 Demo
                               </Button>
+                            )}
+
+                            {project.isActive && (
+                            <Button 
+                              size="sm"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                              }}
+                            >
+                              Active
+                            </Button>
                             )}
 
                             <Button

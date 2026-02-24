@@ -14,11 +14,6 @@ import {
   Mail,
   MapPin,
   Phone,
-  Github,
-  Linkedin,
-  Twitter,
-  Youtube,
-  Facebook,
 } from "lucide-react";
 import { submitContactForm } from "@/actions/contact";
 import type { ContactFormData } from "@/lib/email";
@@ -94,19 +89,19 @@ export default function Contact() {
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email",
-      value: "ahmed.fawzy100150@gmail.com",
-      link: "mailto:ahmed.fawzy100150@gmail.com",
+      value: "amer.live477@gmail.com",
+      link: "mailto:amer.live477@gmail.com",
     },
     {
       icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Phone",
-      value: "+20 (155) 238-9885",
-      link: "tel:+201552389885",
+      value: "+20 (112) 884-3295",
+      link: "tel:+201128843295",
     },
     {
       icon: <MapPin className="h-6 w-6 text-primary" />,
       title: "Location",
-      value: "Cairo, Egypt",
+      value: "Alexandria, Egypt",
       link: null,
     },
   ];
@@ -142,7 +137,7 @@ export default function Contact() {
               <CardContent className="p-6">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
+                    <div className="space-y-4">
                       <Label htmlFor="name">Your Name</Label>
                       <Input
                         id="name"
@@ -154,7 +149,7 @@ export default function Contact() {
                         disabled={isSubmitting}
                       />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-4">
                       <Label htmlFor="email">Your Email</Label>
                       <Input
                         id="email"
@@ -168,7 +163,7 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-4">
                     <Label htmlFor="subject">Subject</Label>
                     <Input
                       id="subject"
@@ -180,7 +175,7 @@ export default function Contact() {
                       disabled={isSubmitting}
                     />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-4">
                     <Label htmlFor="message">Message</Label>
                     <Textarea
                       id="message"
@@ -252,107 +247,6 @@ export default function Contact() {
                   </CardContent>
                 </Card>
               ))}
-
-              <Card className="mt-8">
-                <CardContent className="p-6">
-                  <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
-                  <div className="flex gap-4">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                      asChild
-                    >
-                      <a
-                        href="https://linkedin.com/in/fawzy0z"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                      asChild
-                    >
-                      <a
-                        href="https://github.com/fawzy0z"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                      asChild
-                    >
-                      <a
-                        href="https://tiktok.com/@fawzy0z"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-5 w-5"
-                          viewBox="0 0 448 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
-                          />
-                        </svg>
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                      asChild
-                    >
-                      <a
-                        href="https://youtube.com/@fawzy0z"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Youtube className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                      asChild
-                    >
-                      <a
-                        href="https://facebook.com/fawzy0z"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Facebook className="h-5 w-5" />
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                      asChild
-                    >
-                      <a
-                        href="https://x.com/fawzy0z"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Twitter className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </motion.div>
         </div>

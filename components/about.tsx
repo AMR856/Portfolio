@@ -7,66 +7,69 @@ import { Code, Lightbulb, Rocket } from "lucide-react";
 
 export default function About() {
   const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
   };
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-24 bg-muted/20">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           variants={fadeIn}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <Badge variant="outline" className="mb-4">
+          <Badge variant="outline" className="mb-4 text-lg">
             About Me
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Who I Am</h2>
-          <div className="w-20 h-1 bg-primary mx-auto"></div>
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-3">
+            Who I Am
+          </h2>
+          <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        {/* Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          {/* Text Column */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             variants={fadeIn}
           >
-            <h3 className="text-2xl font-bold mb-4">A Passionate Developer</h3>
-            <p className="text-muted-foreground mb-6">
-              I&apos;m a software developer with a passion for creating clean,
-              efficient, and user-friendly applications. With over 11 years of
-              experience in the industry, I&apos;ve worked on a variety of
-              projects ranging from small business websites to complex
-              enterprise applications.
+            <h3 className="text-3xl font-bold mb-6 text-primary">
+              A Passionate Backend  & Flutter Developer
+            </h3>
+
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Software Engineer with expertise in designing scalable, high-performance systems and APIs, backed by a solid foundation in Electronics and Communication Engineering.
             </p>
-            <p className="text-muted-foreground mb-6">
-              My journey in software development began when I was in secondary
-              school, where I discovered my love for solving complex problems
-              through code. Since then, I&apos;ve been continuously learning and
-              improving my skills to stay at the forefront of technology.
+
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Experienced in delivering real-world backend solutions, including e-commerce platforms and distributed applications.
             </p>
-            <p className="text-muted-foreground">
-              When I&apos;m not coding, you can find me exploring new
-              technologies, contributing to open-source projects, or sharing my
-              knowledge through blog posts on linkedin and videos on tiktok.
+
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              Proficient in clean architecture, design patterns, and testing to build reliable, maintainable systems, with strong collaboration and leadership skills.
             </p>
           </motion.div>
 
+          {/* Cards Column */}
           <div className="grid grid-cols-1 gap-6">
+            {/* Card 1 */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               variants={fadeIn}
             >
-              <Card>
+              <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
@@ -74,9 +77,8 @@ export default function About() {
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Clean Code</h4>
-                      <p className="text-muted-foreground">
-                        I write maintainable, scalable, and efficient code
-                        following best practices and industry standards.
+                      <p className="text-muted-foreground leading-relaxed">
+                        I write maintainable, scalable, and efficient code following best practices and industry standards.
                       </p>
                     </div>
                   </div>
@@ -84,26 +86,24 @@ export default function About() {
               </Card>
             </motion.div>
 
+            {/* Card 2 */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
               variants={fadeIn}
             >
-              <Card>
+              <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                       <Lightbulb className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">
-                        Problem Solver
-                      </h4>
-                      <p className="text-muted-foreground">
-                        I enjoy tackling complex challenges and finding elegant
-                        solutions through creative thinking.
+                      <h4 className="text-xl font-semibold mb-2">Problem Solver</h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        I enjoy tackling complex challenges and finding elegant solutions through creative thinking.
                       </p>
                     </div>
                   </div>
@@ -111,26 +111,24 @@ export default function About() {
               </Card>
             </motion.div>
 
+            {/* Card 3 */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               variants={fadeIn}
             >
-              <Card>
+              <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                       <Rocket className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">
-                        Fast Learner
-                      </h4>
-                      <p className="text-muted-foreground">
-                        I quickly adapt to new technologies and environments,
-                        constantly expanding my skill set.
+                      <h4 className="text-xl font-semibold mb-2">Fast Learner</h4>
+                      <p className="text-muted-foreground leading-relaxed">
+                        I quickly adapt to new technologies and environments, constantly expanding my skill set.
                       </p>
                     </div>
                   </div>
